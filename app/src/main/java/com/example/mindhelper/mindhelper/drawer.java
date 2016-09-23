@@ -10,6 +10,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,8 +44,25 @@ public class drawer extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-headergetname header=new headergetname();
-        header.ppp();
+
+        View header = LayoutInflater.from(this).inflate(R.layout.nav_header_drawer, null);
+        navigationView.addHeaderView(header);
+        TextView text = (TextView) header.findViewById(R.id.name);
+        TextView text2 = (TextView) header.findViewById(R.id.mail);
+        Intent recIntent = getIntent();
+        Intent recIntent2 = getIntent();
+        String name = recIntent.getStringExtra("p_name");
+        String mail = recIntent2.getStringExtra("p_email");
+        text.setText(name);
+        text2.setText(mail);
+
+      /*  View header2 = LayoutInflater.from(this).inflate(R.layout.nav_header_drawer, null);
+        navigationView.addHeaderView(header2);
+        TextView text2 = (TextView) header2.findViewById(R.id.mail);
+        Intent recIntent2 = getIntent();
+        String mail = recIntent.getStringExtra("p_email");
+        text2.setText(mail); */
+
     }
     @Override
     public void onBackPressed() {

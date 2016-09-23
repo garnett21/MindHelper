@@ -52,8 +52,6 @@ private TextView textView_logout;
         etName.setText(name);
 
 
-
-
         button_p.setOnClickListener(new View.OnClickListener() { //前往個人資料
             @Override
             public void onClick(View v) {

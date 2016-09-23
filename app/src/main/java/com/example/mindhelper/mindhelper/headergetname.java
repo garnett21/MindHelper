@@ -16,12 +16,12 @@ public class headergetname extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nav_header_drawer);
-        header = (TextView) findViewById(R.id.header);
+        Intent recIntent = getIntent();
+       // String text = recIntent.getStringExtra("p_name");
+        TextView textView1 = (TextView) findViewById(R.id.name); //get a reference to the textview on the game.xml file.
+        textView1.setText("123");
+
     }
 
-    public void ppp()
-    {
-        header.setText("ooo");
-    }
 }
 
