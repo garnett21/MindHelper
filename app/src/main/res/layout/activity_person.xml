@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mindhelper.mindhelper.PersonActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="#000000"
+        android:fillViewport="false"
+        android:clipToPadding="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="90dp">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="#a5dff9"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/tableRow">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="170dp"
+            android:layout_alignTop="@+id/id" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:ems="10"
+            android:id="@+id/etPassword"
+            android:hint="編輯密碼"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/burron_retangle"
+            android:gravity="center_vertical|center"
+            android:layout_below="@+id/etUsername"
+            android:layout_alignStart="@+id/etUsername"
+            android:layout_alignEnd="@+id/etUsername" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:ems="10"
+            android:id="@+id/id"
+            android:hint="顯示ID"
+            android:background="@drawable/burron_retangle"
+            android:layout_marginTop="34dp"
+            android:gravity="center_vertical|center"
+            android:layout_marginEnd="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:ems="10"
+            android:id="@+id/etName"
+            android:hint="編輯姓名"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/burron_retangle"
+            android:gravity="center_vertical|center"
+            android:layout_below="@+id/id"
+            android:layout_alignStart="@+id/id" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:ems="10"
+            android:id="@+id/etUsername"
+            android:hint="編輯帳號"
+            android:background="@drawable/burron_retangle"
+            android:gravity="center_vertical|center"
+            android:layout_marginTop="33dp"
+            android:layout_below="@+id/etName"
+            android:layout_alignStart="@+id/etName" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/etdoctor"
+            android:hint="顯示治療師ID"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/burron_retangle"
+            android:gravity="center_vertical|center"
+            android:layout_below="@+id/etPassword"
+            android:layout_alignStart="@+id/etUsername"
+            android:layout_alignEnd="@+id/etPassword" />
+
+        <TextView
+            android:text="編號："
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/textView27"
+            android:textSize="18sp"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="35dp"
+
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:text="帳號："
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/textView29"
+            android:textSize="18sp"
+            android:layout_marginTop="35dp"
+            tools:textAlignment="center"
+            android:gravity="center_vertical"
+            android:layout_alignBaseline="@+id/etUsername"
+            android:layout_alignBottom="@+id/etUsername"
+            android:layout_marginLeft="35dp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/spinner2"
+
+            android:layout_alignTop="@+id/textView42"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="編號："
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/textView38"
+            android:textSize="18sp"
+            android:layout_marginTop="35dp"
+            tools:textAlignment="center"
+            android:gravity="center_vertical"
+            android:layout_alignBaseline="@+id/etdoctor"
+            android:layout_alignBottom="@+id/etdoctor"
+            android:layout_marginLeft="35dp" />
+
+        <TextView
+            android:text="密碼："
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/textView24"
+            android:textSize="18sp"
+            tools:textAlignment="center"
+            android:gravity="center_vertical"
+            android:layout_above="@+id/textView38"
+            android:layout_marginLeft="35dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/etEmail"
+            android:hint="編輯信箱"
+            android:background="@drawable/burron_retangle"
+            android:gravity="center_vertical|center"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/spinner2"
+            android:layout_alignEnd="@+id/etdoctor"
+            android:layout_toEndOf="@+id/textView45"
+            android:layout_alignStart="@+id/etdoctor" />
+
+        <TextView
+            android:text="性別："
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/textView42"
+            android:textSize="18sp"
+            tools:textAlignment="center"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/etdoctor"
+            android:layout_alignStart="@+id/textView45"
+            android:layout_marginTop="35dp" />
+
+        <TextView
+            android:text="信箱："
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/textView45"
+            android:textSize="18sp"
+            tools:textAlignment="center"
+            android:gravity="center_vertical"
+            android:layout_alignBaseline="@+id/etEmail"
+            android:layout_alignBottom="@+id/etEmail"
+            android:layout_alignStart="@+id/textView38" />
+
+
+        <TextView
+            android:text="地址："
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/textView46"
+            android:textSize="18sp"
+            tools:textAlignment="center"
+            android:gravity="center_vertical"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/etEmail"
+            android:layout_alignStart="@+id/textView45" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/etAddress"
+            android:hint="編輯地址"
+            android:background="@drawable/burron_retangle"
+            android:gravity="center_vertical|center"
+            android:layout_marginTop="35dp"
+            android:layout_alignBottom="@+id/textView46"
+            android:layout_alignEnd="@+id/etEmail"
+            android:layout_toEndOf="@+id/textView46"
+            android:layout_alignStart="@+id/etEmail" />
+
+        <TextView
+            android:text="姓名："
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/textView28"
+            android:textSize="18sp"
+            tools:textAlignment="center"
+            android:layout_marginLeft="35dp"
+            android:gravity="center_vertical"
+            android:layout_alignBaseline="@+id/etName"
+            android:layout_alignBottom="@+id/etName"
+            />
+
+        <Button
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:text="修改"
+            android:id="@+id/button_update"
+            android:background="@drawable/item_drawable"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginTop="28dp"
+            android:layout_below="@+id/textView46"
+            android:layout_toEndOf="@+id/textView46" />
+
+
+    </RelativeLayout>
+
+
+    </ScrollView>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ef5285"
+        android:id="@+id/tableRow"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="個人資料"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:id="@+id/textView30"
+            tools:textAlignment="center"
+            android:layout_marginLeft="35dp"
+            android:gravity="center_vertical"
+            android:layout_alignBaseline="@+id/etName"
+            android:layout_alignBottom="@+id/etName"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/bright_foreground_inverse_material_light"
+            android:textSize="30sp"
+            android:textStyle="normal|bold" />
+
+    </TableRow>
+
+
+</RelativeLayout>

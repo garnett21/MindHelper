@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MindHelper</string>
+    <string name="about" />
+    <string name="version" />
+    <string name="default_color" />
+    <string name="default_color_summary" />
+    <string name="default_notify" />
+    <string name="default_notify_summary" />
+    <string name="title_activity_color" />
+    <string name="title_record" />
+    <string name="title_play" />
+    <string name="record_play" />
+    <string name="record_new" />
+    <string name="delete_item" />
+    <string name="delete" />
+</resources>

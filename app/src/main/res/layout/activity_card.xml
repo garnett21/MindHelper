@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Card">
+
+    <ListView
+        android:id="@+id/item_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"
+        android:dividerHeight="1sp"
+        android:background="@drawable/retangle_drawable"
+        android:divider="#b74c4c"
+        android:drawSelectorOnTop="true" />
+
+    <TextView
+        android:id="@+id/show_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"
+        android:padding="@dimen/abc_action_bar_content_inset_material"
+        android:background="@drawable/retangle_drawable"
+        android:text="@string/app_name"
+        android:clickable="true"
+        android:onClick="aboutApp"/>
+
+</LinearLayout>

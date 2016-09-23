@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.02"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="117dp"
+            android:layout_height="78dp"
+            android:text="New Text"
+            android:id="@+id/time_text" />
+
+        <TextView
+            android:layout_width="107dp"
+            android:layout_height="79dp"
+            android:text="New Text"
+            android:id="@+id/activity_text" />
+
+        <TextView
+            android:layout_width="98dp"
+            android:layout_height="76dp"
+            android:text="New Text"
+            android:id="@+id/mood_text" />
+
+        <TextView
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/hold_text"
+            android:layout_weight="0.32" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#fbf1a6">
+
+
+    <!--顯示確認密碼-->
+
+    <!--輸入確認密碼-->
+    <!--姓名-->
+
+    <!--輸入姓名-->
+
+
+    <!--生日-->
+
+    <!--輸入生日-->
+
+    <!--性別-->
+
+    <!--輸入性別-->
+
+    <!--輸入身高-->
+    <!--輸入信箱-->
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/user"
+        android:id="@+id/imageView5"
+        android:layout_alignTop="@+id/etUsername"
+        android:layout_alignStart="@+id/imageView6" />
+
+    <EditText
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:id="@+id/etUsername"
+        android:hint="輸入帳號"
+        android:gravity="left"
+        android:layout_marginTop="77dp"
+        android:layout_below="@+id/imageView10"
+        android:layout_alignStart="@+id/etPassword" />
+
+    <Spinner
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:id="@+id/spinner"
+        android:layout_alignTop="@+id/imageView8"
+        android:layout_alignStart="@+id/etName" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/mail"
+        android:id="@+id/imageView9"
+        android:layout_below="@+id/imageView8"
+        android:layout_alignStart="@+id/imageView8"
+        android:layout_marginTop="9dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/lock2"
+        android:id="@+id/imageView6"
+        android:layout_below="@+id/imageView5"
+        android:layout_alignStart="@+id/bRegister"
+        android:layout_marginTop="18dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/name4"
+        android:id="@+id/imageView7"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/imageView6"
+        android:layout_alignStart="@+id/imageView6" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/sex"
+        android:id="@+id/imageView8"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/imageView7"
+        android:layout_alignStart="@+id/imageView7" />
+
+    <EditText
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etName"
+        android:hint="輸入姓名"
+        android:gravity="left"
+
+        android:layout_marginEnd="10dp"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:inputType="textEmailAddress"
+        android:hint="信箱"
+        android:gravity="left"
+        android:ems="10"
+        android:id="@+id/etEmail"
+
+        android:layout_alignTop="@+id/imageView9"
+        android:layout_alignStart="@+id/spinner" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/location"
+        android:id="@+id/imageView11"
+        android:layout_alignTop="@+id/etAddress"
+        android:layout_alignStart="@+id/imageView9" />
+
+    <EditText
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:hint="輸入地址"
+        android:id="@+id/etAddress"
+        android:layout_marginBottom="21dp"
+        android:layout_above="@+id/bRegister"
+        android:layout_alignStart="@+id/etEmail" />
+
+    <EditText
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:id="@+id/etPassword"
+        android:hint="輸入密碼"
+        android:inputType="textPassword"
+        android:gravity="left"
+        android:layout_alignTop="@+id/imageView6"
+        android:layout_alignStart="@+id/etName" />
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:text="註冊"
+        android:id="@+id/bRegister"
+        android:background="@drawable/item_drawable"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <!--輸入信箱-->
+    <!--地址-->
+    <!--輸入地址-->
+
+
+    <!--體重-->
+    <!--輸入體重-->
+
+
+</RelativeLayout>
