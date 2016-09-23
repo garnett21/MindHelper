@@ -62,7 +62,7 @@ public class Login extends AppCompatActivity {
                                         String sex = jsonResponse.getString("p_gender");
                                         String email = jsonResponse.getString("p_email");
                                         String address = jsonResponse.getString("p_address");
-                                        Intent intent = new Intent(Login.this, User_main.class);
+                                        Intent intent = new Intent(Login.this, drawer.class);
                                         intent.putExtra("p_name", name);
                                         intent.putExtra("p_password", password);
                                         intent.putExtra("p_account", username);

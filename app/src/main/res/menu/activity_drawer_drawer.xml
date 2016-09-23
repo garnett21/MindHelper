@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_person"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="個人資料"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/nav_cbt"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="認知行為治療" />
+        <item
+            android:id="@+id/nav_songlist"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="腳本播放" />
+        <item
+            android:id="@+id/nav_progress"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="我的進度"
+            tools:ignore="HardcodedText" />
+    </group>
+
+    <item android:title="Communicate"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="登出" />
+        </menu>
+    </item>
+
+</menu>

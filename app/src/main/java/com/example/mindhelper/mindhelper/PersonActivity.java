@@ -104,7 +104,7 @@ public class PersonActivity extends User_main {
                 final String name = etName.getText().toString();
                 final String username = etUsername.getText().toString();
                 final String password = etPassword.getText().toString();
-                final String age = etAge.getText().toString();
+
                 final int id = Integer.parseInt(etid.getText().toString());
                  final String doctor = etDoctor.getText().toString();
                 final String sex = spinner.getSelectedItem().toString();
@@ -133,7 +133,7 @@ public class PersonActivity extends User_main {
                     }
 
                 };
-                PersonRequest personRequest = new PersonRequest(name, username, password, age, id,doctor,sex,email,address, responseListener);
+                PersonRequest personRequest = new PersonRequest(name, username, password, id,doctor,sex,email,address, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(PersonActivity.this);
                 queue.add(personRequest);
             }

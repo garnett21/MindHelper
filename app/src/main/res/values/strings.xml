@@ -13,4 +13,18 @@
     <string name="record_new" />
     <string name="delete_item" />
     <string name="delete" />
+    <string name="title_activity_user_main2">User_main2</string>
+
+    <string name="title_section1">個人資料</string>
+    <string name="title_section2">認知行為治療</string>
+    <string name="title_section3">播放系統</string>
+    <string name="title_section4">我的進度</string>
+    <string name="title_section5">關於認知行為治療</string>
+    <string name="title_section6">登出</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

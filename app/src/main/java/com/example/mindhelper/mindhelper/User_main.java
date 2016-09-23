@@ -28,7 +28,7 @@ private TextView textView_logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user);
+        setContentView(R.layout.content_drawer);
 
         button = (Button) findViewById(R.id.buttonPrompt);
         button_p = (Button)findViewById(R.id.button_p);
