@@ -46,7 +46,6 @@
         android:hint="輸入帳號"
         android:gravity="left"
         android:layout_marginTop="77dp"
-        android:layout_below="@+id/imageView10"
         android:layout_alignStart="@+id/etPassword" />
 
     <Spinner
@@ -111,7 +110,6 @@
         android:gravity="left"
         android:ems="10"
         android:id="@+id/etEmail"
-
         android:layout_alignTop="@+id/imageView9"
         android:layout_alignStart="@+id/spinner" />
 

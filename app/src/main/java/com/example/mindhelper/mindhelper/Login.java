@@ -66,20 +66,25 @@ public class Login extends AppCompatActivity {
                                         intent.putExtra("p_name", name);
                                         intent.putExtra("p_password", password);
                                         intent.putExtra("p_account", username);
-                                        intent.putExtra("p_auth", age);
                                         intent.putExtra("p_index", id);
-                                        intent.putExtra("p_doctor", doctor);
                                         intent.putExtra("p_gender", sex);
                                         intent.putExtra("p_email", email);
                                         intent.putExtra("p_address", address);
                                         Login.this.startActivity(intent);
-                                    } else {
-                                        AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-                                        builder.setMessage("Login Failed")
-                                                .setNegativeButton("Retry", null)
-                                                .create()
-                                                .show();
-                                    }
+                                    } else if ( etUsername.getText().toString().matches("") || etPassword.getText().toString().matches("")) {
+                                            AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+                                            builder.setMessage("請輸入帳號或密碼")
+                                                    .setNegativeButton("Retry", null)
+                                                    .create()
+                                                    .show();
+                                        }
+                                    else {
+                                            AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+                                            builder.setMessage("Login Failed")
+                                                    .setNegativeButton("Retry", null)
+                                                    .create()
+                                                    .show();
+                                        }
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();

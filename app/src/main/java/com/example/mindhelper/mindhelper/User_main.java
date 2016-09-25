@@ -30,29 +30,18 @@ private TextView textView_logout;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_drawer);
 
-        button = (Button) findViewById(R.id.buttonPrompt);
-        button_p = (Button)findViewById(R.id.button_p);
-        button_cbt = (Button)findViewById(R.id.button_cbt);
-        result = (EditText) findViewById(R.id.editTextResult);
-        textView_help = (TextView) findViewById(R.id.textView_help);
-        button_player = (Button)findViewById(R.id.button_player);
-        textView_logout = (Button) findViewById(R.id.textView_logout);
-        etName = (EditText) findViewById(R.id.etName);
-        card = (Button) findViewById(R.id.card);
         Intent intent = getIntent();
         final String name = intent.getStringExtra("p_name");
         final String username = intent.getStringExtra("p_account");
         final String password = intent.getStringExtra("p_password");
-        final String age = intent.getStringExtra("p_auth");
         final int id = intent.getIntExtra("p_index", -1);
-        final String doctor = intent.getStringExtra("p_doctor");
         final String sex = intent.getStringExtra("p_gender");
         final String email = intent.getStringExtra("p_email");
         final String address = intent.getStringExtra("p_address");
-        etName.setText(name);
 
 
-        button_p.setOnClickListener(new View.OnClickListener() { //前往個人資料
+
+       /* button_p.setOnClickListener(new View.OnClickListener() { //前往個人資料
             @Override
             public void onClick(View v) {
 
@@ -61,9 +50,7 @@ private TextView textView_logout;
                 intent.putExtra("p_name", name);
                 intent.putExtra("p_password", password);
                 intent.putExtra("p_account", username);
-                intent.putExtra("p_auth", age);
                 intent.putExtra("p_index", id);
-                intent.putExtra("p_doctor", doctor);
                 intent.putExtra("p_gender", sex);
                 intent.putExtra("p_email", email);
                 intent.putExtra("p_address", address);
@@ -72,7 +59,7 @@ private TextView textView_logout;
             }
         });
 
-        button_cbt.setOnClickListener(new View.OnClickListener() { //前往TCR
+      /*  button_cbt.setOnClickListener(new View.OnClickListener() { //前往TCR
             @Override
             public void onClick(View v) {
 
@@ -81,9 +68,7 @@ private TextView textView_logout;
                 intent.putExtra("p_name", name);
                 intent.putExtra("p_password", password);
                 intent.putExtra("p_account", username);
-                intent.putExtra("p_auth", age);
                 intent.putExtra("p_index", id);
-                intent.putExtra("p_doctor", doctor);
                 intent.putExtra("p_gender", sex);
                 intent.putExtra("p_email", email);
                 intent.putExtra("p_address", address);
@@ -174,8 +159,8 @@ private TextView textView_logout;
                 AlertDialog alertDialog = alertDialogBuilder.create();
                 alertDialog.show();
 
-            }*/
-        });
+            }
+        });*/
     }
 
 

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="因應卡"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:id="@+id/textView26"
+        android:textSize="30sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Response Card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/textView29"
+        android:textSize="24sp"
+        android:layout_below="@+id/textView26"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="因應卡的使用，是幫助病人練習療程中所學的重要CBT處遇的有效方法。病人可以把想要用來幫助自己因應重要議題或情境的指導語，寫在因應卡上。"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/textView30"
+        android:layout_below="@+id/textView29"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="①選擇一個對病人而言重要的情境"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:id="@+id/textView33"
+        android:layout_below="@+id/textView29"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="②規劃治療處遇，目標是要製作因應卡"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:id="@+id/textView34"
+        android:layout_below="@+id/textView29"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:text="③評估病人實行因應卡策略的預備程度"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:id="@+id/textView35"
+        android:layout_below="@+id/textView29"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="④明確具體地定義出問題的情境和步驟"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:id="@+id/textView36"
+        android:layout_below="@+id/textView29"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="⑤濃縮出指導語的精華"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:id="@+id/textView37"
+        android:layout_below="@+id/textView29"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="⑥要實際。建議成功度較高的策略"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:id="@+id/textView38"
+        android:layout_below="@+id/textView29"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="⑦倡導在真實生活中，常常使用因應卡"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:id="@+id/textView39"
+        android:layout_below="@+id/textView29"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="製作因應卡的秘訣："
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView32"
+        android:layout_below="@+id/textView30"
+        android:layout_alignLeft="@+id/textView30"
+        android:layout_alignStart="@+id/textView30" />
+</RelativeLayout>

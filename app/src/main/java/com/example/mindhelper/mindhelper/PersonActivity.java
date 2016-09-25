@@ -4,6 +4,15 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,7 +27,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class PersonActivity extends User_main {
+public class PersonActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private TextView textView_home;
     private Button button_confirm;
@@ -29,7 +38,30 @@ public class PersonActivity extends User_main {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_person);
+        setContentView(R.layout.activity_drawer_person);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_person);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        View header = LayoutInflater.from(this).inflate(R.layout.nav_header_drawer, null);
+        navigationView.addHeaderView(header);
+        TextView text = (TextView) header.findViewById(R.id.name);
+        TextView text2 = (TextView) header.findViewById(R.id.mail);
+        Intent recIntent = getIntent();
+        Intent recIntent2 = getIntent();
+        String name = recIntent.getStringExtra("p_name");
+        String mail = recIntent2.getStringExtra("p_email");
+        text.setText(name);
+        text2.setText(mail);
+
         mContext = this.getApplicationContext();
         spinner = (Spinner)findViewById(R.id.spinner2);
         arrayList = new ArrayAdapter<String>(PersonActivity.this,
@@ -38,7 +70,6 @@ public class PersonActivity extends User_main {
         final EditText etName = (EditText) findViewById(R.id.etName);
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
-        final EditText etAge = (EditText) findViewById(R.id.etAge);
         final EditText etid = (EditText) findViewById(R.id.id);
         final EditText etDoctor = (EditText) findViewById(R.id.etdoctor);
         final Button button_update = (Button) findViewById(R.id.button_update);
@@ -48,13 +79,10 @@ public class PersonActivity extends User_main {
        // textView_home = (TextView)findViewById(R.id.textView_home2);
        // button_confirm = (Button) findViewById(R.id.button_confirm);
         Intent intent = getIntent();
-        final String name = intent.getStringExtra("p_name");
         final String username = intent.getStringExtra("p_account");
         final String password = intent.getStringExtra("p_password");
-        final String age = intent.getStringExtra("p_auth");
         final int id = intent.getIntExtra("p_index", -1);
         final String doctor = intent.getStringExtra("p_doctor");
-        final String sex = intent.getStringExtra("p_gender");
         final String email = intent.getStringExtra("p_email");
         final String address = intent.getStringExtra("p_address");
         //實做OnClickListener界面
@@ -104,7 +132,6 @@ public class PersonActivity extends User_main {
                 final String name = etName.getText().toString();
                 final String username = etUsername.getText().toString();
                 final String password = etPassword.getText().toString();
-
                 final int id = Integer.parseInt(etid.getText().toString());
                  final String doctor = etDoctor.getText().toString();
                 final String sex = spinner.getSelectedItem().toString();
@@ -140,4 +167,82 @@ public class PersonActivity extends User_main {
         });
 
 }
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_person);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.drawer, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+        Intent intent = getIntent();
+        final String name = intent.getStringExtra("p_name");
+        final String username = intent.getStringExtra("p_account");
+        final String password = intent.getStringExtra("p_password");
+        final int personid = intent.getIntExtra("p_index", -1);
+        final String sex = intent.getStringExtra("p_gender");
+        final String email = intent.getStringExtra("p_email");
+        final String address = intent.getStringExtra("p_address");
+        if (id == R.id.nav_person) {
+            // Handle the camera action
+
+            Intent personintent = new Intent(PersonActivity.this, PersonActivity.class);
+            personintent.putExtra("p_name", name);
+            personintent.putExtra("p_password", password);
+            personintent.putExtra("p_account", username);
+            personintent.putExtra("p_index", personid);
+            personintent.putExtra("p_gender", sex);
+            personintent.putExtra("p_email", email);
+            personintent.putExtra("p_address", address);
+            PersonActivity.this.startActivity(personintent);
+        } else if (id == R.id.nav_cbt) {
+            // Intent cbtintent = new Intent(drawer.this, .class);
+            // drawer.this.startActivity(cbtintent);
+
+        } else if (id == R.id.nav_songlist) {
+            Intent songintent = new Intent(PersonActivity.this, PlayAudioExample.class);
+            PersonActivity.this.startActivity(songintent);
+
+        } else if (id == R.id.nav_progress) {
+            // Intent progressintent = new Intent(drawer.this, .class);
+            //  drawer.this.startActivity(progressintent);
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_person);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 }

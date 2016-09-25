@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="活動排程表"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:id="@+id/textView21"
+        android:textSize="30sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="當疲勞和喜惡不能持續惡化，病人覺得筋疲力，並且認為自己無法經驗快樂的時候，活動排程也許可以帶來幫助。"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView22"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView23"
+        android:layout_alignLeft="@+id/textView22"
+        android:layout_alignStart="@+id/textView22" />
+
+    <TextView
+        android:text="藉由完成活動排程表，病患亦可重新檢視自己的生活：是否付出太多、留給自己的時間太少?亦或留給自己的時間太多。"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView22"
+        android:layout_marginTop="100dp"
+        android:id="@+id/textView24"
+        android:layout_alignLeft="@+id/textView22"
+        android:layout_alignStart="@+id/textView22" />
+
+
+    <TextView
+        android:text="☼當人做愉悅的活動時，較容易對自己和生活有正面的思考。"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView22"
+        android:layout_marginTop="170dp"
+        android:id="@+id/textView25"
+        android:layout_alignLeft="@+id/textView22"
+        android:layout_alignStart="@+id/textView22" />
+
+    <TextView
+        android:text="☼令人愉悅的活動可幫助我們擁有更愉快的感受"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView22"
+        android:layout_marginTop="210dp"
+        android:id="@+id/textView2"
+        android:layout_alignLeft="@+id/textView22"
+        android:layout_alignStart="@+id/textView22" />
+
+    <TextView
+        android:text="☼能夠獨自完成某些活動對你是好的"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView22"
+        android:layout_marginTop="240dp"
+        android:id="@+id/textView27"
+        android:layout_alignLeft="@+id/textView22"
+        android:layout_alignStart="@+id/textView22" />
+
+    <TextView
+        android:text="☼能夠和別人一起做某些活動也是好的"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView22"
+        android:layout_marginTop="270dp"
+        android:id="@+id/textView28"
+        android:layout_alignLeft="@+id/textView22"
+        android:layout_alignStart="@+id/textView22" />
+
+    <TextView
+        android:text="Activity Scheduling Recoeds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:id="@+id/textView22"
+        android:textSize="24sp"
+        android:layout_below="@+id/textView21"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/tree4"
+
+        android:id="@+id/imageView6"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView22"
+        android:layout_alignEnd="@+id/textView22" />
+</RelativeLayout>
